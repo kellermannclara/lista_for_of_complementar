@@ -8,10 +8,25 @@
 
     //Entrada
 
+    let bebidas = ["Cerveja", "Vinho", "Suco Natural", "Tequila", "Água", "Refrigerante", "Vodka"];
 
     //Processamento
 
+    let alcoolica = [];
+    let nao = [];
+
+    for (bebida of bebidas) {
+        const pergunta = prompt(`Informe se a bebida ${bebida} é alcoolica ou não. S - Sim e N - Não`);
+
+        if (pergunta.toUpperCase() == `S`) {
+            alcoolica.push(bebida);
+        } else {
+            nao.push(bebida);
+        }
+    }
 
     //Saída
+
+    alert(`As bebidas pemitidas para menores de 18 anos são ${nao.join(", ")}`);
 
 </script>

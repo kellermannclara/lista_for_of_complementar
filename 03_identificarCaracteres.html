@@ -7,10 +7,25 @@
 
     //Entrada
 
+    const palavra = prompt(`Informe uma palavra`);
 
     //Processamento
 
+    let desmontada = Array.from(palavra);
+    let vogais = [];
+    let consoantes = [];
 
+    for (vogal of desmontada) {
+        if (vogal.toUpperCase() == `A` || vogal.toUpperCase() == `E` || vogal.toUpperCase() == `I` || vogal.toUpperCase() == `O` || vogal.toUpperCase() == `U`) {
+            vogais.push(vogal);
+        } else {
+            consoantes.push(vogal);
+        }
+    
+
+    }
     //Saída
+    
+    alert(`A palavra ${palavra} contém ${vogais.length} vogais e ${consoantes.length} consoantes`);
 
 </script>
