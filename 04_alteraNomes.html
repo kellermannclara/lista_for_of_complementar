@@ -9,10 +9,32 @@
 
     //Entrada
 
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
 
     //Processamento
 
+    let tira = [];
+
+    for (let nome of nomes) {
+        
+
+        if (nome.indexOf("á") > 0) {
+            let tirarA = nome.replace("á", "a");
+            tira.push(tirarA);
+        } else if (nome.indexOf("é") > 0) {
+            let tiraAcentoE = nome.replace("é", "e");
+            tira.push(tiraAcentoE);
+        } else if (nome.indexOf("ú") > 0){
+            let tiraAcentoU = nome.replace("ú", "u");
+            tira.push(tiraAcentoU);
+        } else{
+            tira.push(nome);
+        }
+    }
+
 
     //Saída
+
+    alert(`A lista de nomes sem acentos é ${tira.join(", ")}`);
 
 </script>
